@@ -45,7 +45,7 @@ document.getElementById('mobile-btn').addEventListener('click', function (event)
 
     const container = document.getElementById('activity-status');
     const div = document.createElement('div');
-    div.classList.add('bg-gray-200', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
+    div.classList.add('bg-gray-100', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
 
     const mobileTitle = document.getElementById('mobile-title').innerText;
     const date = Date();
@@ -60,7 +60,7 @@ document.getElementById('mobile-btn').addEventListener('click', function (event)
     const disable = document.getElementById('mobile-btn');
     disable.disabled = true;
     const del = document.getElementById('mobile-btn');
-    del.classList = 'opacity-50 bg-gray-200 px-5 py-2.5 rounded-lg'
+    del.classList = 'opacity-50 bg-blue-200 px-5 py-2.5 rounded-lg'
 
 
 })
@@ -87,7 +87,7 @@ document.getElementById('dark-btn').addEventListener('click', function (event) {
 
     const container = document.getElementById('activity-status');
     const div = document.createElement('div');
-    div.classList.add('bg-gray-200', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
+    div.classList.add('bg-gray-100', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
 
     const darkTitle = document.getElementById('dark-title').innerText;
     const date = Date();
@@ -102,7 +102,7 @@ document.getElementById('dark-btn').addEventListener('click', function (event) {
     const disable = document.getElementById('dark-btn');
     disable.disabled = true;
     const del = document.getElementById('dark-btn');
-    del.classList = 'opacity-50 bg-gray-200 px-5 py-2.5 rounded-lg'
+    del.classList = 'opacity-50 bg-blue-200 px-5 py-2.5 rounded-lg'
 
 
 })
@@ -129,7 +129,7 @@ document.getElementById('homepage-btn').addEventListener('click', function (even
 
     const container = document.getElementById('activity-status');
     const div = document.createElement('div');
-    div.classList.add('bg-gray-200', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
+    div.classList.add('bg-gray-100', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
 
     const homepageTitle = document.getElementById('homepage-title').innerText;
     const date = Date();
@@ -144,7 +144,7 @@ document.getElementById('homepage-btn').addEventListener('click', function (even
     const disable = document.getElementById('homepage-btn');
     disable.disabled = true;
     const del = document.getElementById('homepage-btn');
-    del.classList = 'opacity-50 bg-gray-200 px-5 py-2.5 rounded-lg'
+    del.classList = 'opacity-50 bg-blue-200 px-5 py-2.5 rounded-lg'
 
 
 })
@@ -171,7 +171,7 @@ document.getElementById('emoji-btn').addEventListener('click', function (event) 
 
     const container = document.getElementById('activity-status');
     const div = document.createElement('div');
-    div.classList.add('bg-gray-200', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
+    div.classList.add('bg-gray-100', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
 
     const emojiTitle = document.getElementById('emoji-title').innerText;
     const date = Date();
@@ -186,7 +186,7 @@ document.getElementById('emoji-btn').addEventListener('click', function (event) 
     const disable = document.getElementById('emoji-btn');
     disable.disabled = true;
     const del = document.getElementById('emoji-btn');
-    del.classList = 'opacity-50 bg-gray-200 px-5 py-2.5 rounded-lg'
+    del.classList = 'opacity-50 bg-blue-200 px-5 py-2.5 rounded-lg'
 
 
 })
@@ -213,7 +213,7 @@ document.getElementById('api-btn').addEventListener('click', function (event) {
 
     const container = document.getElementById('activity-status');
     const div = document.createElement('div');
-    div.classList.add('bg-gray-200', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
+    div.classList.add('bg-gray-100', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
 
     const apiTitle = document.getElementById('api-title').innerText;
     const date = Date();
@@ -228,7 +228,7 @@ document.getElementById('api-btn').addEventListener('click', function (event) {
     const disable = document.getElementById('api-btn');
     disable.disabled = true;
     const del = document.getElementById('api-btn');
-    del.classList = 'opacity-50 bg-gray-200 px-5 py-2.5 rounded-lg'
+    del.classList = 'opacity-50 bg-blue-200 px-5 py-2.5 rounded-lg'
 
 
 })
@@ -255,7 +255,7 @@ document.getElementById('job-btn').addEventListener('click', function (event) {
 
     const container = document.getElementById('activity-status');
     const div = document.createElement('div');
-    div.classList.add('bg-gray-200', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
+    div.classList.add('bg-gray-100', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
 
     const jobTitle = document.getElementById('job-title').innerText;
     const date = Date();
@@ -270,7 +270,7 @@ document.getElementById('job-btn').addEventListener('click', function (event) {
     const disable = document.getElementById('job-btn');
     disable.disabled = true;
     const del = document.getElementById('job-btn');
-    del.classList = 'opacity-50 bg-gray-200 px-5 py-2.5 rounded-lg'
+    del.classList = 'opacity-50 bg-blue-200 px-5 py-2.5 rounded-lg'
 
 
 })
