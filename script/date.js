@@ -275,13 +275,18 @@ document.getElementById('job-btn').addEventListener('click', function (event) {
 
 })
 
+const allButton = document.getElementsByClassName('btn-click');
+if (allButton.disabled === true) {
+    alert('asdas')
+}
 
 
 // clear activity status
 document.getElementById('clear-history-btn').addEventListener('click', function () {
-    const remove = document.getElementById('activity-status-container');
+    // const remove = document.getElementById('activity-status-container');
     const child = document.getElementById('activity-status');
-    remove.removeChild(child);
+    // remove.removeChild(child);
+    child.innerHTML = "";
 })
 
 
@@ -290,3 +295,5 @@ document.getElementById('clear-history-btn').addEventListener('click', function 
 const blog = document.getElementById('blog').addEventListener('click', function () {
     window.location.href = "./blog.html"
 })
+
+
