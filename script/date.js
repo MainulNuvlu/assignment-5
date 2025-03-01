@@ -283,3 +283,10 @@ document.getElementById('clear-history-btn').addEventListener('click', function 
     const child = document.getElementById('activity-status');
     remove.removeChild(child);
 })
+
+
+
+
+const blog = document.getElementById('blog').addEventListener('click', function () {
+    window.location.href = "./blog.html"
+})
