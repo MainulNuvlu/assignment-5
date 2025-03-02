@@ -9,7 +9,6 @@ todayDate.innerHTML = `
     <p class="text-xl">${slicedDay},<br><span class="font-bold"> ${slicedDate}</span></p>
 `
 
-
 // random background color
 document.getElementById('theme').addEventListener('click', function () {
     let color = ['bg-red-300', 'bg-yellow-200', 'bg-green-200', 'bg-pink-300', 'bg-aqua-400', 'bg-violet-200', 'bg-teal-300'];
@@ -21,339 +20,97 @@ document.getElementById('theme').addEventListener('click', function () {
 })
 
 
-
-
-
-
-
-
-
-// fix mobile btn
-document.getElementById('mobile-btn').addEventListener('click', function (event) {
-    event.preventDefault();
-    alert('Board Updated Successfully');
-
-    const task = document.getElementById('task-to-be-assigned').innerText;
+function minus(id) {
+    const task = document.getElementById(id).innerText;
     const convertedTask = parseFloat(task);
-    // console.log(convertedTask);
     const UpdatedTask = convertedTask - 1;
-    document.getElementById('task-to-be-assigned').innerText = '0' + UpdatedTask;
+    document.getElementById(id).innerText = '0' + UpdatedTask;
+}
 
-
-    const assignedTask = document.getElementById('assigned-task').innerText;
+function plus(id) {
+    const assignedTask = document.getElementById(id).innerText;
     const convertedAssignedTask = parseFloat(assignedTask);
-    // console.log(convertedTask);
     const UpdatedAssignedTask = convertedAssignedTask + 1;
-    document.getElementById('assigned-task').innerText = UpdatedAssignedTask;
+    document.getElementById(id).innerText = UpdatedAssignedTask;
+}
 
-
-
-    const container = document.getElementById('activity-status');
+function activityStatus(activityID, titleID) {
+    const container = document.getElementById(activityID);
     const div = document.createElement('div');
     div.classList.add('bg-gray-100', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
-
-    const mobileTitle = document.getElementById('mobile-title').innerText;
+    const mobileTitle = document.getElementById(titleID).innerText;
     const date = Date();
     const sliceTime = date.slice(16, 24);
-
     div.innerHTML = `
     <p>You have completed the task ${mobileTitle} at ${sliceTime}</p>
 `
     container.appendChild(div);
+}
 
-
-    const disable = document.getElementById('mobile-btn');
+function disableButton(buttonID) {
+    const disable = document.getElementById(buttonID);
     disable.disabled = true;
-    const del = document.getElementById('mobile-btn');
+    const del = document.getElementById(buttonID);
     del.classList = 'opacity-50 bg-blue-200 px-5 py-2.5 rounded-lg'
+}
 
-
-    let count = document.getElementById('task-to-be-assigned').innerText;
+function finalAlert(minusID) {
+    let count = document.getElementById(minusID).innerText;
     let countUpdate = parseInt(count);
-    // console.log(countUpdate);
-
-
     if (countUpdate === 0) {
         alert('Congrates!!! You have completed all the current task')
     }
+}
 
 
-
+document.getElementById('mobile-btn').addEventListener('click', function (event) {
+    alert('Board Updated Successfully');
+    minus('task-to-be-assigned');
+    plus('assigned-task');
+    activityStatus('activity-status', 'mobile-title');
+    disableButton('mobile-btn')
+    finalAlert('task-to-be-assigned');
 })
-
-// dark mode btn
 document.getElementById('dark-btn').addEventListener('click', function (event) {
-    event.preventDefault();
     alert('Board Updated Successfully');
-
-    const task = document.getElementById('task-to-be-assigned').innerText;
-    const convertedTask = parseFloat(task);
-    // console.log(convertedTask);
-    const UpdatedTask = convertedTask - 1;
-    document.getElementById('task-to-be-assigned').innerText = '0' + UpdatedTask;
-
-
-    const assignedTask = document.getElementById('assigned-task').innerText;
-    const convertedAssignedTask = parseFloat(assignedTask);
-    // console.log(convertedTask);
-    const UpdatedAssignedTask = convertedAssignedTask + 1;
-    document.getElementById('assigned-task').innerText = UpdatedAssignedTask;
-
-
-
-    const container = document.getElementById('activity-status');
-    const div = document.createElement('div');
-    div.classList.add('bg-gray-100', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
-
-    const darkTitle = document.getElementById('dark-title').innerText;
-    const date = Date();
-    const sliceTime = date.slice(16, 24);
-
-    div.innerHTML = `
-    <p>You have completed the task ${darkTitle} at ${sliceTime}</p>
-`
-    container.appendChild(div);
-
-
-    const disable = document.getElementById('dark-btn');
-    disable.disabled = true;
-    const del = document.getElementById('dark-btn');
-    del.classList = 'opacity-50 bg-blue-200 px-5 py-2.5 rounded-lg'
-
-
-    let count = document.getElementById('task-to-be-assigned').innerText;
-    let countUpdate = parseInt(count);
-    // console.log(countUpdate);
-
-
-    if (countUpdate === 0) {
-        alert('Congrates!!! You have completed all the current task')
-    }
-
-
-
-
+    minus('task-to-be-assigned');
+    plus('assigned-task');
+    activityStatus('activity-status', 'dark-title');
+    disableButton('dark-btn')
+    finalAlert('task-to-be-assigned');
 })
-
-// optimize home page
 document.getElementById('homepage-btn').addEventListener('click', function (event) {
-    event.preventDefault();
     alert('Board Updated Successfully');
-
-    const task = document.getElementById('task-to-be-assigned').innerText;
-    const convertedTask = parseFloat(task);
-    // console.log(convertedTask);
-    const UpdatedTask = convertedTask - 1;
-    document.getElementById('task-to-be-assigned').innerText = '0' + UpdatedTask;
-
-
-    const assignedTask = document.getElementById('assigned-task').innerText;
-    const convertedAssignedTask = parseFloat(assignedTask);
-    // console.log(convertedTask);
-    const UpdatedAssignedTask = convertedAssignedTask + 1;
-    document.getElementById('assigned-task').innerText = UpdatedAssignedTask;
-
-
-
-    const container = document.getElementById('activity-status');
-    const div = document.createElement('div');
-    div.classList.add('bg-gray-100', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
-
-    const homepageTitle = document.getElementById('homepage-title').innerText;
-    const date = Date();
-    const sliceTime = date.slice(16, 24);
-
-    div.innerHTML = `
-    <p>You have completed the task ${homepageTitle} at ${sliceTime}</p>
-`
-    container.appendChild(div);
-
-
-    const disable = document.getElementById('homepage-btn');
-    disable.disabled = true;
-    const del = document.getElementById('homepage-btn');
-    del.classList = 'opacity-50 bg-blue-200 px-5 py-2.5 rounded-lg'
-
-
-
-    let count = document.getElementById('task-to-be-assigned').innerText;
-    let countUpdate = parseInt(count);
-    // console.log(countUpdate);
-
-
-    if (countUpdate === 0) {
-        alert('Congrates!!! You have completed all the current task')
-    }
-
-
-
-
+    minus('task-to-be-assigned');
+    plus('assigned-task');
+    activityStatus('activity-status', 'homepage-title');
+    disableButton('homepage-btn')
+    finalAlert('task-to-be-assigned');
 })
-
-// emoji btn
 document.getElementById('emoji-btn').addEventListener('click', function (event) {
-    event.preventDefault();
     alert('Board Updated Successfully');
-
-    const task = document.getElementById('task-to-be-assigned').innerText;
-    const convertedTask = parseFloat(task);
-    // console.log(convertedTask);
-    const UpdatedTask = convertedTask - 1;
-    document.getElementById('task-to-be-assigned').innerText = '0' + UpdatedTask;
-
-
-    const assignedTask = document.getElementById('assigned-task').innerText;
-    const convertedAssignedTask = parseFloat(assignedTask);
-    // console.log(convertedTask);
-    const UpdatedAssignedTask = convertedAssignedTask + 1;
-    document.getElementById('assigned-task').innerText = UpdatedAssignedTask;
-
-
-
-    const container = document.getElementById('activity-status');
-    const div = document.createElement('div');
-    div.classList.add('bg-gray-100', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
-
-    const emojiTitle = document.getElementById('emoji-title').innerText;
-    const date = Date();
-    const sliceTime = date.slice(16, 24);
-
-    div.innerHTML = `
-    <p>You have completed the task ${emojiTitle} at ${sliceTime}</p>
-`
-    container.appendChild(div);
-
-
-    const disable = document.getElementById('emoji-btn');
-    disable.disabled = true;
-    const del = document.getElementById('emoji-btn');
-    del.classList = 'opacity-50 bg-blue-200 px-5 py-2.5 rounded-lg'
-
-
-
-    let count = document.getElementById('task-to-be-assigned').innerText;
-    let countUpdate = parseInt(count);
-    // console.log(countUpdate);
-
-
-    if (countUpdate === 0) {
-        alert('Congrates!!! You have completed all the current task')
-    }
-
-
-
+    minus('task-to-be-assigned');
+    plus('assigned-task');
+    activityStatus('activity-status', 'emoji-title');
+    disableButton('emoji-btn')
+    finalAlert('task-to-be-assigned');
 })
-
-// api btn
 document.getElementById('api-btn').addEventListener('click', function (event) {
-    event.preventDefault();
     alert('Board Updated Successfully');
-
-    const task = document.getElementById('task-to-be-assigned').innerText;
-    const convertedTask = parseFloat(task);
-    // console.log(convertedTask);
-    const UpdatedTask = convertedTask - 1;
-    document.getElementById('task-to-be-assigned').innerText = '0' + UpdatedTask;
-
-
-    const assignedTask = document.getElementById('assigned-task').innerText;
-    const convertedAssignedTask = parseFloat(assignedTask);
-    // console.log(convertedTask);
-    const UpdatedAssignedTask = convertedAssignedTask + 1;
-    document.getElementById('assigned-task').innerText = UpdatedAssignedTask;
-
-
-
-    const container = document.getElementById('activity-status');
-    const div = document.createElement('div');
-    div.classList.add('bg-gray-100', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
-
-    const apiTitle = document.getElementById('api-title').innerText;
-    const date = Date();
-    const sliceTime = date.slice(16, 24);
-
-    div.innerHTML = `
-    <p>You have completed the task ${apiTitle} at ${sliceTime}</p>
-`
-    container.appendChild(div);
-
-
-    const disable = document.getElementById('api-btn');
-    disable.disabled = true;
-    const del = document.getElementById('api-btn');
-    del.classList = 'opacity-50 bg-blue-200 px-5 py-2.5 rounded-lg'
-
-
-    let count = document.getElementById('task-to-be-assigned').innerText;
-    let countUpdate = parseInt(count);
-    // console.log(countUpdate);
-
-
-    if (countUpdate === 0) {
-        alert('Congrates!!! You have completed all the current task')
-    }
-
-
-
-
+    minus('task-to-be-assigned');
+    plus('assigned-task');
+    activityStatus('activity-status', 'api-title');
+    disableButton('api-btn')
+    finalAlert('task-to-be-assigned');
 })
-
-// job button
 document.getElementById('job-btn').addEventListener('click', function (event) {
-    event.preventDefault();
     alert('Board Updated Successfully');
-
-    // subbed applied task
-    const task = document.getElementById('task-to-be-assigned').innerText;
-    const convertedTask = parseFloat(task);
-    // console.log(convertedTask);
-    const UpdatedTask = convertedTask - 1;
-    document.getElementById('task-to-be-assigned').innerText = '0' + UpdatedTask;
-
-
-    // add applied task
-    const assignedTask = document.getElementById('assigned-task').innerText;
-    const convertedAssignedTask = parseFloat(assignedTask);
-    // console.log(convertedTask);
-    const UpdatedAssignedTask = convertedAssignedTask + 1;
-    document.getElementById('assigned-task').innerText = UpdatedAssignedTask;
-
-
-    // add new section in activity status
-    const container = document.getElementById('activity-status');
-    const div = document.createElement('div');
-    div.classList.add('bg-gray-100', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
-
-    const jobTitle = document.getElementById('job-title').innerText;
-    const date = Date();
-    const sliceTime = date.slice(16, 24);
-
-    div.innerHTML = `
-    <p>You have completed the task ${jobTitle} at ${sliceTime}</p>
-`
-    container.appendChild(div);
-
-
-    // disable button
-    const disable = document.getElementById('job-btn');
-    disable.disabled = true;
-    const del = document.getElementById('job-btn');
-    del.classList = 'opacity-50 bg-blue-200 px-5 py-2.5 rounded-lg'
-
-
-    let count = document.getElementById('task-to-be-assigned').innerText;
-    let countUpdate = parseInt(count);
-    // console.log(countUpdate);
-
-
-    if (countUpdate === 0) {
-        alert('Congrates!!! You have completed all the current task')
-    }
-
-
+    minus('task-to-be-assigned');
+    plus('assigned-task');
+    activityStatus('activity-status', 'job-title');
+    disableButton('job-btn')
+    finalAlert('task-to-be-assigned');
 })
-
-
 
 
 // clear activity status
@@ -365,10 +122,7 @@ document.getElementById('clear-history-btn').addEventListener('click', function 
 })
 
 
-
 // link
 const blog = document.getElementById('blog').addEventListener('click', function () {
     window.location.href = "./blog.html"
 })
-
-
