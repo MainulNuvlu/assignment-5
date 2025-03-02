@@ -23,6 +23,11 @@ document.getElementById('theme').addEventListener('click', function () {
 
 
 
+
+
+
+
+
 // fix mobile btn
 document.getElementById('mobile-btn').addEventListener('click', function (event) {
     event.preventDefault();
@@ -61,6 +66,17 @@ document.getElementById('mobile-btn').addEventListener('click', function (event)
     disable.disabled = true;
     const del = document.getElementById('mobile-btn');
     del.classList = 'opacity-50 bg-blue-200 px-5 py-2.5 rounded-lg'
+
+
+    let count = document.getElementById('task-to-be-assigned').innerText;
+    let countUpdate = parseInt(count);
+    // console.log(countUpdate);
+
+
+    if (countUpdate === 0) {
+        alert('Congrates!!! You have completed all the current task')
+    }
+
 
 
 })
@@ -105,6 +121,18 @@ document.getElementById('dark-btn').addEventListener('click', function (event) {
     del.classList = 'opacity-50 bg-blue-200 px-5 py-2.5 rounded-lg'
 
 
+    let count = document.getElementById('task-to-be-assigned').innerText;
+    let countUpdate = parseInt(count);
+    // console.log(countUpdate);
+
+
+    if (countUpdate === 0) {
+        alert('Congrates!!! You have completed all the current task')
+    }
+
+
+
+
 })
 
 // optimize home page
@@ -145,6 +173,19 @@ document.getElementById('homepage-btn').addEventListener('click', function (even
     disable.disabled = true;
     const del = document.getElementById('homepage-btn');
     del.classList = 'opacity-50 bg-blue-200 px-5 py-2.5 rounded-lg'
+
+
+
+    let count = document.getElementById('task-to-be-assigned').innerText;
+    let countUpdate = parseInt(count);
+    // console.log(countUpdate);
+
+
+    if (countUpdate === 0) {
+        alert('Congrates!!! You have completed all the current task')
+    }
+
+
 
 
 })
@@ -189,6 +230,18 @@ document.getElementById('emoji-btn').addEventListener('click', function (event) 
     del.classList = 'opacity-50 bg-blue-200 px-5 py-2.5 rounded-lg'
 
 
+
+    let count = document.getElementById('task-to-be-assigned').innerText;
+    let countUpdate = parseInt(count);
+    // console.log(countUpdate);
+
+
+    if (countUpdate === 0) {
+        alert('Congrates!!! You have completed all the current task')
+    }
+
+
+
 })
 
 // api btn
@@ -231,6 +284,18 @@ document.getElementById('api-btn').addEventListener('click', function (event) {
     del.classList = 'opacity-50 bg-blue-200 px-5 py-2.5 rounded-lg'
 
 
+    let count = document.getElementById('task-to-be-assigned').innerText;
+    let countUpdate = parseInt(count);
+    // console.log(countUpdate);
+
+
+    if (countUpdate === 0) {
+        alert('Congrates!!! You have completed all the current task')
+    }
+
+
+
+
 })
 
 // job button
@@ -238,6 +303,7 @@ document.getElementById('job-btn').addEventListener('click', function (event) {
     event.preventDefault();
     alert('Board Updated Successfully');
 
+    // subbed applied task
     const task = document.getElementById('task-to-be-assigned').innerText;
     const convertedTask = parseFloat(task);
     // console.log(convertedTask);
@@ -245,6 +311,7 @@ document.getElementById('job-btn').addEventListener('click', function (event) {
     document.getElementById('task-to-be-assigned').innerText = '0' + UpdatedTask;
 
 
+    // add applied task
     const assignedTask = document.getElementById('assigned-task').innerText;
     const convertedAssignedTask = parseFloat(assignedTask);
     // console.log(convertedTask);
@@ -252,7 +319,7 @@ document.getElementById('job-btn').addEventListener('click', function (event) {
     document.getElementById('assigned-task').innerText = UpdatedAssignedTask;
 
 
-
+    // add new section in activity status
     const container = document.getElementById('activity-status');
     const div = document.createElement('div');
     div.classList.add('bg-gray-100', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
@@ -267,18 +334,26 @@ document.getElementById('job-btn').addEventListener('click', function (event) {
     container.appendChild(div);
 
 
+    // disable button
     const disable = document.getElementById('job-btn');
     disable.disabled = true;
     const del = document.getElementById('job-btn');
     del.classList = 'opacity-50 bg-blue-200 px-5 py-2.5 rounded-lg'
 
 
+    let count = document.getElementById('task-to-be-assigned').innerText;
+    let countUpdate = parseInt(count);
+    // console.log(countUpdate);
+
+
+    if (countUpdate === 0) {
+        alert('Congrates!!! You have completed all the current task')
+    }
+
+
 })
 
-const allButton = document.getElementsByClassName('btn-click');
-if (allButton.disabled === true) {
-    alert('asdas')
-}
+
 
 
 // clear activity status
@@ -291,7 +366,7 @@ document.getElementById('clear-history-btn').addEventListener('click', function 
 
 
 
-
+// link
 const blog = document.getElementById('blog').addEventListener('click', function () {
     window.location.href = "./blog.html"
 })

@@ -56,9 +56,13 @@
                     <h3 class="p-5 border-b border-dashed border-gray-200 font-bold">Question-1: What are the different
                         ways to
                         select an element in the DOM?</h3>
-                    <p class="p-5 opacity-80">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa
-                        officia
-                        natus facere
+                    <p class="p-5 opacity-80">There are some ways to select an element in the DOM. <br>
+                        There are few: <br>
+                        i. getElementById ----- to select an element using its id <br>
+                        ii. getElementsByClassName ----- to select an or multiple item with the same class <br>
+                        iii. getElementsByName ---- to select an or collection of elements using name attribute <br>
+                        iv. querySelectorAll ---- returns all descendent selectors from the specific selector <br>
+                        v. querySelector ---- returns the first descendent child
                     </p>
                 </div>
 
@@ -67,9 +71,15 @@
                 <div class="bg-white mt-5 rounded-2xl">
                     <h3 class="p-5 border-b border-dashed border-gray-200 font-bold">Question-2: What is the difference
                         between innerHTML, innerText, and textContent ?</h3>
-                    <p class="p-5 opacity-80">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa
-                        officia
-                        natus facere
+                    <p class="p-5 opacity-80"> innerHTML ---- it gets or set the inner HTML elements within the element.
+                        It contains tags,attribute,content etc. <br>
+                        innerText ---- It gets or sets the text of an element. It can only show text which are rendered
+                        in screen but can not access text which are hidden using CSS or other methods.<br>
+                        innerContent ---- It also gets or sets the text of an element. It can access both text which are
+                        rendered on display and hidden using CSS or other method. It do not access any styling of text
+                        and return only raw text. <br>
+
+
                     </p>
                 </div>
 
@@ -78,9 +88,13 @@
                 <div class="bg-white mt-5 rounded-2xl">
                     <h3 class="p-5 border-b border-dashed border-gray-200 font-bold">Question-3: What is event
                         delegation in the DOM?</h3>
-                    <p class="p-5 opacity-80">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa
-                        officia
-                        natus facere
+                    <p class="p-5 opacity-80">
+                        It is an event handling pattern that allows us to control an event at a higher level rather than
+                        the level where the event was first happened. The idea is to delegate the event to the parent
+                        element and control its root element where the event happens. <br> For example: if we have 3
+                        buttons
+                        in a div. We can access events in button using div. [event.target.tagName]
+
                     </p>
                 </div>
 
@@ -89,9 +103,13 @@
                 <div class="bg-white mt-5 rounded-2xl">
                     <h3 class="p-5 border-b border-dashed border-gray-200 font-bold">Question-4: What is event bubbling
                         in the DOM?</h3>
-                    <p class="p-5 opacity-80">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa
-                        officia
-                        natus facere
+                    <p class="p-5 opacity-80">
+                        It happens when an element receives an event, that event bubbles up or transmitted to its parent
+                        elements in the DOM until it reach to the root element. <br> Example: section>div>button -- here
+                        the
+                        child element is button. is the button receives the click event it will pass that event to div,
+                        then the event also passes to the section until ite reach HTML element which is the root element
+                        in html.
                     </p>
                 </div>
 
@@ -100,9 +118,31 @@
                 <div class="bg-white mt-5 rounded-2xl">
                     <h3 class="p-5 border-b border-dashed border-gray-200 font-bold">Question-5: How do you create, add,
                         and remove elements using JavaScript?</h3>
-                    <p class="p-5 opacity-80">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa
-                        officia
-                        natus facere
+                    <p class="p-5 opacity-80">
+                        Create Element: <br>
+                        To create a new element in JavaScript is by using the
+                        document.createElement()
+                        method. This method creates a new element of a type and returns it as a DOM node. <br>
+                        ex: document.createElement('div') -- new div is created.<br><br>
+
+                        Add Element: <br>
+                        First we have to create an element which we want to add into an element. <br>
+                        let new = document.createElement('div');<br>
+                        Then we can append the newly created element into the target node by using appendChild() method.
+                        <br>
+                        we can also use innerHTML --- ex: div.innerHTML = ` <br>
+                        code* <br>
+                        ` <br> <br>
+
+                        Delete Element: <br>
+                        remove() method: <br>
+                        const element = document.getElementById("id"); <br>
+                        element.remove(); <br><br>
+                        removeChild() method: <br>
+                        const parent = document.getElementById("parent"); <br>
+                        const child = document.getElementById("child"); <br>
+                        const delete = parent.removeChild(child); <br>
+
                     </p>
                 </div>
 
