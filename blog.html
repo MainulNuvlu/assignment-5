@@ -58,11 +58,11 @@
                         select an element in the DOM?</h3>
                     <p class="p-5 opacity-80">There are some ways to select an element in the DOM. <br>
                         There are few: <br>
-                        i. getElementById ----- to select an element using its id <br>
-                        ii. getElementsByClassName ----- to select an or multiple item with the same class <br>
-                        iii. getElementsByName ---- to select an or collection of elements using name attribute <br>
-                        iv. querySelectorAll ---- returns all descendent selectors from the specific selector <br>
-                        v. querySelector ---- returns the first descendent child
+                        i. getElementById() ----- to select an element using its id <br>
+                        ii. getElementsByClassName() ----- to select an or multiple item with the same class <br>
+                        iii. getElementsByName() ---- to select an or collection of elements using name attribute <br>
+                        iv. querySelectorAll() ---- returns all descendent selectors from the specific selector <br>
+                        v. querySelector() ---- returns the first descendent child
                     </p>
                 </div>
 
@@ -107,7 +107,7 @@
                         It happens when an element receives an event, that event bubbles up or transmitted to its parent
                         elements in the DOM until it reach to the root element. <br> Example: section>div>button -- here
                         the
-                        child element is button. is the button receives the click event it will pass that event to div,
+                        child element is button. If the button receives the click event it will pass that event to div,
                         then the event also passes to the section until ite reach HTML element which is the root element
                         in html.
                     </p>
@@ -119,26 +119,32 @@
                     <h3 class="p-5 border-b border-dashed border-gray-200 font-bold">Question-5: How do you create, add,
                         and remove elements using JavaScript?</h3>
                     <p class="p-5 opacity-80">
-                        Create Element: <br>
+                        <u>Create Element:</u> <br>
                         To create a new element in JavaScript is by using the
                         document.createElement()
                         method. This method creates a new element of a type and returns it as a DOM node. <br>
-                        ex: document.createElement('div') -- new div is created.<br><br>
+                        Example : document.createElement('div') -- new div is created.<br><br>
 
-                        Add Element: <br>
+                        <u>Add Element:</u> <br>
                         First we have to create an element which we want to add into an element. <br>
                         let new = document.createElement('div');<br>
                         Then we can append the newly created element into the target node by using appendChild() method.
                         <br>
-                        we can also use innerHTML --- ex: div.innerHTML = ` <br>
+                        we can also use innerHTML --- Example : div.innerHTML = ` <br>
                         code* <br>
                         ` <br> <br>
 
-                        Delete Element: <br>
-                        remove() method: <br>
+                        <u>Delete Element:</u> <br><br>
+                        i. remove() method: <br>
+                        First we need to get the element by its id or class and put it in a variable. Then use --
+                        variable.remove() to remove that element. <br>
+                        Example : <br>
                         const element = document.getElementById("id"); <br>
                         element.remove(); <br><br>
-                        removeChild() method: <br>
+                        ii. removeChild() method: <br>
+                        We can delete an child element using its parent element by accessing them using their id and
+                        then use -- parentVariable.removeChild(childVariable) method <br>
+                        Example : <br>
                         const parent = document.getElementById("parent"); <br>
                         const child = document.getElementById("child"); <br>
                         const delete = parent.removeChild(child); <br>
