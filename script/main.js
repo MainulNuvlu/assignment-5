@@ -39,10 +39,11 @@ function activityStatus(activityID, titleID) {
     const div = document.createElement('div');
     div.classList.add('bg-gray-100', 'mt-5', 'py-2', 'px-3', 'rounded-lg')
     const mobileTitle = document.getElementById(titleID).innerText;
-    const date = Date();
-    const sliceTime = date.slice(16, 24);
+
+    let timeParam = { timeZone: "Asia/Dhaka", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: true };
+    let time = new Date().toLocaleTimeString("en-US", timeParam);
     div.innerHTML = `
-    <p>You have completed the task ${mobileTitle} at ${sliceTime}</p>
+    <p>You have completed the task ${mobileTitle} at ${time}</p>
 `
     container.appendChild(div);
 }
