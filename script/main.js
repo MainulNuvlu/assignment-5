@@ -11,7 +11,7 @@ todayDate.innerHTML = `
 
 // random background color
 document.getElementById('theme').addEventListener('click', function () {
-    let color = ['bg-red-300', 'bg-yellow-200', 'bg-green-200', 'bg-pink-300', 'bg-aqua-400', 'bg-violet-200', 'bg-teal-300'];
+    let color = ['bg-red-300', 'bg-yellow-200', 'bg-green-200', 'bg-pink-300', 'bg-cyan-400', 'bg-violet-200', 'bg-teal-300'];
     let i = Math.floor(Math.random() * color.length);
     let r = color[i];
     // console.log(r);
